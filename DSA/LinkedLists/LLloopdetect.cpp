@@ -51,21 +51,46 @@ void detectloop(Node** head_ref)
 			break;
 		}
 	}
+	
 	if(flag==true)
 		cout<<"LOop deCtected "<<c<<" counter"<<endl;
 	else if(flag== false)
 		cout<<"Goodnight "<<c<<" counter"<<endl;
-//	Node* count
-	c=c-1;
-	Node* n=slow;
-	while(--c){
-		n=n->next;
-		cout<<n->data<<" ";
+
+	//counting number of nodes in loop
+	Node* m=slow;
+	m=m->next;
+	int k=0;
+	while(m!=slow){
+		k++;
+		m=m->next;
 	}
-	cout<<endl;
-	n->next=NULL;
-		
+	k++;
+	cout<<k<<endl;
+	
+	//finding looping point
+	Node* h1=head;
+	Node* h2=head;
+	while(k--){
+		h2=h2->next;
+	}
+	
+	while(h1!=h2){
+		h1=h1->next;
+		h2=h2->next;
+	}
+	cout<<h1->data<<" "<<h2->data<<endl;
+	
+	//removing loop
+	Node* tail=h1;
+	while((tail->next)!=h2)
+	{
+		tail=tail->next;
+	}
+	tail->next=NULL;
+	
 }
+
 Node* newNode(int key) 
 { 
     Node* temp = new Node(); 
@@ -88,7 +113,7 @@ int main(){
 
 	print(head);
 	
-    head->next->next->next->next->next->next->next = head->next; 
+    head->next->next->next->next->next->next->next = head->next->next;
     
 	detectloop(&head);
 	cout<<"Removed the loop"<<endl;
