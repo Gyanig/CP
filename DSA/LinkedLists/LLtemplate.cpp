@@ -16,7 +16,7 @@ class LinkedList{
 	public:	
 		Node* head;
 		
-		LinkedList(int data)
+		LinkedList()
 		{
 			head=NULL;
 		}
@@ -56,7 +56,7 @@ class LinkedList{
 		
 		//reverse- recursive
 		Node* rrev(Node* head){
-			if(head==NULL||head->next==NULL){
+			if(head==NULL|head->next==NULL){
 				return head;
 			}
 			
@@ -68,9 +68,21 @@ class LinkedList{
 		
 };
 
+
+
 int main(){
+	LinkedList LL1;
+	LL1.push(3);
+	LL1.append(&LL1.head,8);
+	LL1.append(&LL1.head,10);
 	
+	LinkedList LL2;
+	LL2.push(5);
+	LL2.append(&LL2.head,6);
+	LL2.append(&LL2.head,12);
 	
+	LL1.print();
+	LL2.print();
 	
 	return 0;
 }
