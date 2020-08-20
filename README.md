@@ -16,6 +16,6 @@ Data structure and Algorithms Topics covered
 
 - Searching:  Linear, Modded Linear, Binary , Modded Binary , Jump, interpolation, Exponential 
 - Sorting:  Bubble Sort, Insertion Sort, Selection Sort, Quick Sort, Merge Sort
-- Linked List: Singly Linked Lists 
+- Linked List: Singly Linked Lists, Doubly Linked Lists 
 - OOPS: Class, Object
 
