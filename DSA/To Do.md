@@ -1,8 +1,8 @@
 
-#H1 *Topics which are left to be covered later:*
+# *Topics which are left to be covered later:*
 ----------  
 *for future reference*
-Sorting Algorithms
+### Sorting Algorithms
 
 1. Find a permutation that causes worst case of Merge Sort (Write a brute force algo to find worst case for any sorting algo) 
 2. Using Coq or Isabelle/HOL (functional programing for mathematical proofing) for analysing stability of algorithms like sorting ( never written script in Coq or Isabelle)
