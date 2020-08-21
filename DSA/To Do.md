@@ -10,5 +10,9 @@
 4. Hoare's Scheme(more efficient comaprisions) Vs Lomuto's Scheme 
 5. Comparisons involved in Modified Quicksort Using Merge Sort Tree/Persistent Segment Tree/Fenwick Tree (Tree topic not covered)
 6. Range Order Statistics for finding median
+<<<<<<< HEAD
 7. 
 ----------
+=======
+7. Writing brute froce input using rand() for competitive contests
+>>>>>>> 8be0242... DSA folder update

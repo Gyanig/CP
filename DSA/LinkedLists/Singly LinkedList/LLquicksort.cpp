@@ -25,8 +25,11 @@ void push(Node** head_ref,int data)
 	(*head_ref)=new_node;
 }
 
+<<<<<<< HEAD
 Node* partition()
 
+=======
+>>>>>>> 8be0242... DSA folder update
 
 int main(){
 	Node* head=NULL;
@@ -35,6 +38,7 @@ int main(){
 		
 	print(head);
 
+<<<<<<< HEAD
 	cout<<"\nEnter 10 elements to LL :\n";
 	Node* n=head;
 	for(int i=0;i<10;i++) // we can use count to change values of all nodes
@@ -47,6 +51,8 @@ int main(){
 	
 	
 	quicksort()
+=======
+>>>>>>> 8be0242... DSA folder update
 	return 0;
 }
 
