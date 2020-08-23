@@ -11,4 +11,7 @@
 5. Comparisons involved in Modified Quicksort Using Merge Sort Tree/Persistent Segment Tree/Fenwick Tree (Tree topic not covered)
 6. Range Order Statistics for finding median
 7. Writing brute froce input using rand() for competitive contests
----------- 
+8. The Great Tree-List Recursion Problem
+
+----------
+
