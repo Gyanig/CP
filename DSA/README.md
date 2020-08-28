@@ -12,6 +12,7 @@
 6. Range Order Statistics for finding median
 7. Writing brute froce input using rand() for competitive contests
 8. The Great Tree-List Recursion Problem
+9. Write a flexible k-stack method of large n size ( basically need-basis K-th stack of increasing length with a max limit )
 
 ----------
 
