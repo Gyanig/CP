@@ -12,7 +12,7 @@ A curated list of CP problems solved from time to time with my own interpretatio
 *Dont use my solutions for solving live contests*
 
 ----------
-###Data structure and Algorithms Topics covered
+### Data structure and Algorithms Topics covered
 
 - Searching:  Linear, Modded Linear, Binary , Modded Binary , Jump, interpolation, Exponential 
 - Sorting:  Bubble Sort, Insertion Sort, Selection Sort, Quick Sort, Merge Sort
@@ -24,7 +24,7 @@ A curated list of CP problems solved from time to time with my own interpretatio
 
 
 ----------
-###Some extra topics to be covered (imp)
+### Some extra topics to be covered (imp)
 - implement Stack using Queues
 - implement Queue using Stack
 - implement DeQue using Circular Array
