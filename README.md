@@ -31,11 +31,11 @@ A curated list of CP problems solved from time to time with my own interpretatio
 
 ----------
 ### Some extra topics to be covered (imp)
-- implement Stack using Queues
-- implement Queue using Stack
-- implement DeQue using Circular Array
-- implement Binary tree from traversal order
-- reverse Inorder traversals
-- 
-
+- Implement Stack using Queues
+- Implement Queue using Stack
+- Implement DeQue using Circular Array
+- Implement Binary tree from traversal order
+- Reverse Inorder traversals
+- Insertion through Level Order / Breadth first
+- Work with a easy to use header file for all sort of functions
 

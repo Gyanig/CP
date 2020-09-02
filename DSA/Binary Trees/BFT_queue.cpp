@@ -1,20 +1,9 @@
 #include<bits/stdc++.h>
+#include "binarytree.h" 
+
 using namespace std;
 
 // better solution at it is O(n) complexity-space and time
-
-class  Node{
-	public:
-		int data;
-		Node* left;
-		Node* right;
-		
-		Node(int d)
-		{
-			data=d;
-			left=right=NULL;
-		}
-};
 
 void bft_queue(Node* root)
 {

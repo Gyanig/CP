@@ -75,7 +75,7 @@ void infix_postfix(string t)
 
 int main()
 {
-	string exp="a+b*(c^d-e)^(f+g*h)-i";
+	string exp="a+(b*c-(d/e^f)*g)*h";
 	cout<<exp<<endl;
 	infix_postfix(exp);
 	

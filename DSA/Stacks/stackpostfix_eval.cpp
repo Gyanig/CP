@@ -15,11 +15,11 @@ void evalpostfix(string a)
 //	cout<<l<<endl;
 	for(int i=0;i<l;i++)
 	{
-		cout<<a[i]<<"-current, i= "<<i<<endl;
+//		cout<<a[i]<<"-current, i= "<<i<<endl;
 		
 		if((a[i]>='a') && (a[i]<='z'))
 		{
-			cout<<"check 1"<<endl;
+//			cout<<"check 1"<<endl;
 			char c=a[i];
 			string pp="";
 			pp+=c;
@@ -29,7 +29,7 @@ void evalpostfix(string a)
 		
 		else
 		{
-			cout<<"check 2"<<endl;
+//			cout<<"check 2"<<endl;
 			string x=s.top();
 			s.pop();
 			string y=s.top();
@@ -53,7 +53,7 @@ void evalpostfix(string a)
 
 int main()
 {
-	string exp="abcd^e-fgh*+^*+i-";
+	string exp="abc/+de*-+f";
 	evalpostfix(exp);
 	return 0;
 }
