@@ -1,5 +1,4 @@
-#include <bits/stdc++.h> 
-using namespace std; 
+#include <stdio.h> 
 
 //using structures instead of class
 struct QNode 

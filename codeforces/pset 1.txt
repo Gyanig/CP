@@ -1,0 +1,226 @@
+D. Zoom Clumps
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Emily is currently in a Zoom call with some friends. Currently, she is viewing the call in a way such that everyone's videos are on and everyone is in a line.
+
+Ansh, another person in the call, is curious if people have their video flipped. He decides that on the count of three, everyone in the call will look right. However, because some people's cameras are flipped, this may result in them looking left in everyone else's perspective!
+
+Emily however, is more curious in how many clumps would form, where a clump is a contiguous set of people who are all looking the same direction. After everyone turned their heads, she took a screenshot of everyone's faces in a line. Given the directions that everyone is facing, help Emily determine how many clumps are in the photo!
+
+Input
+The first line contains N(1≤N≤105), the number of people in the call.
+
+The next N lines each contain a single character L or R. An L in the ith line represents that the ith person was looking left in the photo, while an R in the ith line represents that the ith person was looking right in the photo.
+
+Output
+A single integer C, the number of clumps that have formed.
+
+Example
+inputCopy
+4
+R
+L
+L
+R
+outputCopy
+3
+E. Headquarters
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Eric Yuan, founder and CEO of Zoom, has decided that the Zoom company headquarters in San Jose, CA is just not in an ideal location. Rent prices are rising by the day, but more importantly, Eric wants the headquarters building to have some kind of special connection to the Zoom user base, in a way that San Jose is lacking.
+
+Eric has decided that the new headquarters building should be placed at the site of the average location of all Zoom users. That way the company can be symbolically placed at the center of its users' lives. Of course, if he truly wanted to follow through with this idea, the building would need to be built somewhere beneath the Earth's crust. But to make his vision feasible in reality, Eric has decided to simplify his model of the world to just consider 2D locations on a flat map.
+
+Given a list of N cities, each with a location (xi,yi) on the map and a population of Zoom users pi concentrated in that city, help Eric figure out where to build the new Zoom headquarters!
+
+Input
+The first line of input contains the integer N (1≤N<1000). The next N lines each consist of three integers: xi, yi where (−1000≤xi,yi≤1000), and pi where (1≤pi<1000), denoting the coordinate location and user population (in thousands) of the ith city.
+
+Output
+Output the average location of all Zoom users, xa and ya, within a .0001 margin of error. Assume that all Zoom users live exactly at the (x,y) location of their home city.
+
+Example
+inputCopy
+3
+-10 6 4
+1 -9 3
+8 8 3
+outputCopy
+-1.3 2.1
+F. Zoom Exercises
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Elijah and Fiona are trying to improve their fitness this quarantine season and have decided to set up daily zoom workout sessions in order to motivate each other. Their workout routine has gone great for the past couple weeks with the exception of the pushup sets. Elijah hates pushups so he devises this game to try to offload as much of the pushups as he can onto Fiona. They usually do n different rounds of pushups in a given workout session. For each round, they decide to play the following game: the number of pushups in the ith round is ai and the players take turns replacing the number with any of its divisors other than itself. The person that replaces the number with a 1 loses. Fiona agrees to play the game with Elijah on the condition that if she wins the ith round, Elijah must do double the amount of pushups (2⋅ai) allotted for that round and if he wins, he doesn't have to do any pushup that round. Given that both players play the game optimally, calculate the number of pushups that Elijah will have to do after all the rounds.
+
+Elijah and Fiona have become fitness buffs so the number of pushups per round can be quite large, be sure to use the appropriately sized type (like longs in Java and C++).
+
+Input
+The first line contains the number of pushup amounts n (1≤n≤100).
+
+Then, n lines will follow, the ith line will contain a single integer ai (2≤ai≤1011).
+
+Output
+Output the number of pushups that Elijah will have to do after playing all the games.
+
+Examples
+inputCopy
+1
+6
+outputCopy
+0
+inputCopy
+2
+30
+2
+outputCopy
+4
+Note
+For the first sample, Elijah can replace the 6 with 3, and then Fiona is forced to replace 3 with a 1 so Elijah will win and will not have to do any push-ups.
+
+G. Character Quilt
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Terrence, like the rest of us, occasionally finds himself stuck in a Zoom call that is not particularly exciting, perhaps even boring. At times like these, he likes to send Direct Messages to his friends on the call to liven up the mood. Rather than sending something normal like links to memes, Terrence prefers to send what he calls a Character Quilt.
+
+A Character Quilt is a rectangular grid of transformed Character Tiles, and a Character Tile is simply a square grid of characters. In order to construct a Character Quilt, Terrence starts by defining N aesthetically pleasing Character Tiles, where each Character Tile consists of a grid of characters with dimensions S×S. After that, Terrence defines the overall Character Quilt which is a W×H grid of Character Tiles. For each tile slot in the quilt, he specifies the index i (0≤i<N) of the tile that should fill that slot.
+
+To make things more interesting, Terrence also specifies a transformation indicator t for each tile slot in the quilt, indicating what kind of transformation should be applied to the source Character Tile. When t=0, no transformation is applied. When t=1, the Character Tile should be rotated 90 degrees clockwise. When t=2, the Character Tile is rotated 180 degrees. When t=3, the Character Tile should be rotated 270 degrees clockwise. When t=4, the Character Tile is flipped across the vertical axis (side-to-side), and lastly, when t=5, the Character Tile is flipped across the horizontal axis.
+
+For example, with a 2×2 tile abcd, below are the transformation results for each value of t.
+
+t:Tile:0abcd1cadb2dcba3bdac4badc5cdab
+Help Terrence automatically generate his Character Quilts so that he can rapidly spam his friends!
+
+Input
+The first line of input contains two integers: N and S (1≤N,S≤15). Then N Character Tiles follow, each consisting of S lines with S characters.
+
+The next line of input contains two integers: W and H (1≤W,H≤100). H lines follow. Each of these lines contain W tile specifications where a tile specification is of the form i:t. The first number i is the index of a Character Tile from the inputted list (0 represents the first tile and N−1 represents the last), and t specifies the type of transformation to apply to that tile in the final quilt.
+
+Output
+Print the final Character Quilt, with all of the transformed Character Tiles filled into the right places.
+
+Example
+inputCopy
+2 3
+<<>
+^<^
+<>>
+>*=
+*+*
++=>
+5 3
+0:0 1:0 0:0 1:4 0:0
+1:0 1:1 1:2 1:3 1:0
+0:5 1:0 0:5 1:4 0:5
+outputCopy
+<<>>*=<<>=*><<>
+^<^*+*^<^*+*^<^
+<>>+=><>>>=+<>>
+>*=+*>>=+=*>>*=
+*+*=+**+**+=*+*
++=>>*==*>>*++=>
+<>>>*=<>>=*><>>
+^<^*+*^<^*+*^<^
+<<>+=><<>>=+<<>
+H. Wifi Points
+time limit per test8 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Sarah is experimenting with a new video meeting service called Dash, but unfortunately has a poor internet connection. She wants to optimize her Dash experience by finding the point in her house with the best internet connection from a small set of landmarks. You must create a program that finds the quickest route that visits all of these landmarks, so that Sarah can decide where to take her Dash meetings as quickly as possible.
+
+Sarah's house can be represented by a 2D grid with impassable walls and markings for her current location and the location of each landmark. Given this 2D grid, find the length of the minimum path that starts from Sarah's location and visits all of the landmarks in her house. Sarah can move in any of the cardinal directions throughout this grid, but can't leave the grid or go through walls.
+
+You are guaranteed that all the landmarks are reachable from Sarah's current location.
+
+Input
+The first line of the input contains three integers n, m, and k (1≤n,m≤500;1≤k≤6) – the number of rows, the number of columns, and the number of landmarks in the grid representation of Sarah's house. The next n lines consist of m characters that are either S to denote Sarah's starting position, X to denote a landmark, * to denote an impassable wall, and . to denote an empty space in the grid.
+
+Output
+Print one integer – the length of the minimum path that starts from Sarah's location and visits all of the landmarks in her house.
+
+Examples
+inputCopy
+3 7 2
+*******
+X...S.X
+*******
+outputCopy
+8
+inputCopy
+3 7 4
+***X***
+X...S.X
+***X***
+outputCopy
+12
+I. Diane's Dating Game
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Diane wants to host her own dating gameshow... on Zoom! Her brilliant idea is to continuously eliminate contestants (uniquely identified by an integer between 1 and N) at random until only two remain, and then have the lucky pair go on a private getaway. Diane would like to use the features of Zoom to her advantage to handle her elimination process (and increase her showmanship).
+
+At the top of her meeting, there is a bar of video screens showing all original contestants (assume that Diane's video screen is not included). We can think of this as a permutation array, where the i-th element represents the video of some unique contestant. Every elimination will be conducted by Diane flipping a fair coin. A flip of heads will result in the video screen furthest to the left being kicked out of the meeting, while a flip of tails will result in the video screen furthest to the right being kicked out of the meeting. This elimination process will end when exactly two (future) lovers remain on the bar of video screens.
+
+The "compatibility index" of two contestants can be computed as the bitwise XOR of their assigned ID. Can you help Diane calculate the expected value of the compatibility index of the winning couple?
+
+Input
+There are two lines in each test case.
+
+The first line contains a single integer N (2≤N≤2000) representing the number of original contestants in the Zoom room.
+
+The second line contains N unique space separated integers ci (1≤ci≤N) representing the original ordering of contestants in the bar of video screens.
+
+Output
+Output a single integer representing the calculated expected value of the compatibility index times 2N−2 modulo 109+7.
+
+Examples
+inputCopy
+2
+2 1
+outputCopy
+3
+inputCopy
+4
+3 1 2 4
+outputCopy
+14
+Note
+In the first sample, we do not eliminate any contestants and our expected value is simply 2⊕1=3.
+
+In the second sample, there is a 14 chance we end up with (3,1), a 12 chance we end up with (1,2), and a 14 chance we end up with (2,4). Our expected value is thus 14⋅2+12⋅3+14⋅6=72.
+
+J. Risk
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let X=x0,⋯,xn−1 be random variables with zero expectation, and let G be an undirected unweighted graph with vertices X. Define the variance of xi to be the degree of the vertex xi in G, and the covariance between xi and xj to be −1 if xi is adjacent to xj in G and 0 otherwise. Your goal is to come up with a linear combination of the xi's with maximal variance. In general, this is obviously unbounded, so please restrain yourself to linear combinations where the sum of the squares of the coefficients adds to 1.
+
+Now, here's an unrelated, completely hypothetical story. Alex graduated from his university with a computer science degree, but decided to work in finance instead of tech. This might have been a big mistake – his big performance review is in two days, and he has lost millions of dollars through the past couple of months due to trading blunders. Thankfully, he has come up with a plan to save his job with the following motto: "Go big or go home". All he needs to do is take on the riskiest possible position. If it pans out he'll keep his job, and if it goes belly up... well, he was going to get fired anyway!
+
+Input
+The first line will have space-separated integers n, the number of vertices in the graph, and |G|, the number of edges in the graph. |G| lines follow, each containing a pair of space-separated integers, i and j (i≠j,0≤i,j<n) representing adjacent vertices xi and xj in G.
+
+You are guaranteed that 1≤n≤100 and 1≤|G|≤1600.
+
+Output
+Output a double representing the maximal standard deviation within a .0001 margin of error.
+
+Example
+inputCopy
+2 1
+0 1
+outputCopy
+1.4142135623730951
+Note
+This problem has the same prerequisites as UT's CS331 Algorithms: Probability/stats and matrices/linear algebra.

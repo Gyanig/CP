@@ -15,18 +15,41 @@ A curated list of CP problems solved from time to time with my own interpretatio
 ### Data structure and Algorithms Topics covered
 
 - Searching:  Linear, Modded Linear, Binary , Modded Binary , Jump, interpolation, Exponential 
+
 - Sorting:  Bubble Sort, Insertion Sort, Selection Sort, Quick Sort, Merge Sort
+
 - Linked List: Singly Linked Lists, Doubly Linked Lists, Circular LinkedList
+
 - Stacks: Introduction, STL, infix-postfix, reverse, LL approach 
 	- (*to-be-done : recursion, sorting, stocking span problem, K-stack variable size implementation*)
+
 - Queues: Introduction, STL, Priority Queue, LL approach, DeQue, Circular Queue w- array/LL 
-	- (*to-be-done: Priority Queue problems(after studying heaps,tree&graphs), Deque problems, Circular Queue problems *)
-- Binary Tree: Introduction, BFS recursive,BFS Queue,
-	- (*to-be-done: Applications of binary tree*)
+	- (*to-be-done: Priority Queue problems(after studying heaps,tree&graphs), Deque problems, Circular Queue problems*)
+
+- Binary Tree: Introduction, Level Order traversal Recursive & Queue, Level Order Insertion, Deep Deletion, Depth first traversals,  
+	- (*to-be-done: Applications of binary tree, other properties on binary trees*)
+
+- Binary Search Tree: 
+	- (*to-be-done: *)
+
+- Heap:
+	- (*to-be-done: *)
+
+- Hashing:
+	- (*to-be-done: *)
+
+- Graph:
+	- (*to-be-done: *)
+
+- Tree:
+	- (*to-be-done: *)
+
 - OOPS: Class, Object, Constructor, Dynamic Memory Allocation  
 	- (*to-be-done : inline, macros, define, object call some more*) 
+
 - STL: stack,iterator,vectors,priority_queue,deque, greater 
 	- ( *to-be-done : maps, list, sortings, searching*)
+	
 
 
 ----------
