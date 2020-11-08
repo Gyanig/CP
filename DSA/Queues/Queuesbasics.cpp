@@ -1,8 +1,7 @@
-#include<bits/stdc++.h>
+#include<stdio.h>
 using namespace std;
 
-class Queue{
-	public:
+struct Queue{
 		int front,rear, size;
 		unsigned capacity;
 		int* array;
@@ -10,7 +9,7 @@ class Queue{
 
 Queue* create(unsigned capacity)
 {
-	Queue* queue=new Queue();
+	Queue* queue=(struct Queue)malloc(sizeof(struct Queue));
 	queue->capacity=capacity;
 	
 	queue->size=0;
