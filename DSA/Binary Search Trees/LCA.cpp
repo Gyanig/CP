@@ -1,11 +1,10 @@
-//Using the binary search tree, also study balanced tree structures and rotation
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class BST{
-	public:
-		int data;
+class BST
+{
+    public:
+        int data;
 		BST* left;
 		BST* right;
 		
@@ -53,12 +52,24 @@ class BST{
 			cout<<root->data<<" ";
 			inorder(root->right);
 		}
+
+
+        BST* LCA(BST* temp, int x, int y)
+        {
+            if(temp==NULL)return NULL;
+
+            if(temp->data > x && temp->data>y )
+                return LCA(temp->left,x,y);
+            if(temp->data < x && temp->data<y )   
+                return LCA(temp->right,x,y);
+
+            return temp;    
+        }
 };
-
-
 
 int main()
 {
+    
 	BST b, *root = NULL; 
 	
     root = b.insert(root, 50); 
@@ -68,9 +79,14 @@ int main()
     b.insert(root, 70); 
     b.insert(root, 60); 
     b.insert(root, 80); 
-  	b.insert(root, 20);	
-    b.inorder(root);
-    
-	return 0;
-}
+//	b.insert(root, 20);
 
+	cout << "Inorder traversal of the given tree \n"; 
+    b.inorder(root); 
+    cout<<endl;
+    
+    int x =20,y=40;
+    BST* res=b.LCA(root,x,y);
+    cout<<"LCA "<<res->data<<endl;
+    return 0;
+}

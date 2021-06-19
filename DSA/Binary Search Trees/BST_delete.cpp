@@ -8,60 +8,59 @@ using namespace std;
 class BST{
 	public:
 		int data;
-		BST* left,*right;
-		BST();
+		BST* left;
+		BST* right;
 		
-		BST(int);
+		BST()
+		{
+			data=0;
+			left=NULL;
+			right=NULL;
+		}
 		
-		BST* insert(BST* , int);
+		BST(int d)
+		{
+			data=d;
+			left=NULL;
+			right=NULL;
+		}
 		
-		void inorder(BST*);
+		BST* insert(BST* root,int d)
+		{
+			if(!root)
+			{
+				return new BST(d);
+			}
+			
+			if(d>root->data)
+			{
+				root->right= insert(root->right,d);
+			}
+			else
+			{
+				root->left= insert(root->left,d);
+			}
+			return root;
+		}
+
 		
-		BST* minValue(BST*);
+		void inorder(BST* root)
+		{
+			if(!root)
+			{
+				return;
+			}
+				
+			inorder(root->left);
+			cout<<root->data<<" ";
+			inorder(root->right);
+		}
+		
+		BST* minValue(BST*); //inorder successor
 		
 		BST* delete_child(BST*,int);
 		
-	
 };
-
-BST::BST():data(0),left(NULL),right(NULL){}
-
-BST::BST(int d)
-{
-	data=d;
-	left=NULL;
-	right=NULL;
-}
-
-BST* BST::insert(BST* root,int d)
-{
-	if(!root)
-	{
-		return new BST(d);
-	}
-	
-	if(d>root->data)
-	{
-		root->right= insert(root->right,d);
-	}
-	else
-	{
-		root->left= insert(root->left,d);
-	}
-	return root;
-}
-
-void BST::inorder(BST* root)
-{
-	if(!root)
-	{
-		return;
-	}
-		
-	inorder(root->left);
-	cout<<root->data<<" ";
-	inorder(root->right);
-}
 
 //deleting child has three cases: delete leaf, delete child with one leaf, delete child with two leafs
 BST* BST::minValue(BST* n)
@@ -71,7 +70,6 @@ BST* BST::minValue(BST* n)
 	{
 		c=c->left;
 	}
-	
 	return c;
 }
 

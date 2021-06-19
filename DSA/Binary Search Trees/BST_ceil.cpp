@@ -1,11 +1,10 @@
-//Using the binary search tree, also study balanced tree structures and rotation
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class BST{
-	public:
-		int data;
+class BST
+{
+    public:
+        int data;
 		BST* left;
 		BST* right;
 		
@@ -53,12 +52,23 @@ class BST{
 			cout<<root->data<<" ";
 			inorder(root->right);
 		}
+
+        int ceil(BST* temp, int input)
+        {
+            if(temp==NULL) return -1;
+
+            if(temp->data==input) return temp->data;
+
+            if(temp->data<input) return ceil(temp->right, input);
+
+            int c= ceil(temp->left,input);
+            return (c>=input)?c:temp->data;
+        }
 };
-
-
 
 int main()
 {
+    
 	BST b, *root = NULL; 
 	
     root = b.insert(root, 50); 
@@ -68,9 +78,14 @@ int main()
     b.insert(root, 70); 
     b.insert(root, 60); 
     b.insert(root, 80); 
-  	b.insert(root, 20);	
-    b.inorder(root);
-    
-	return 0;
-}
+//	b.insert(root, 20);
 
+	cout << "Inorder traversal of the given tree \n"; 
+    b.inorder(root); 
+    cout<<endl;
+    
+    for(int i=10;i<100;i+=10)
+        cout<<i<<" "<<b.ceil(root,i)<<endl;
+
+    return 0;
+}
