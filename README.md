@@ -33,7 +33,7 @@ A curated list of CP problems solved from time to time with my own interpretatio
 	- (*to-be-done: *)
 
 - Heap:
-	- (*to-be-done: *)
+	- (*to-be-done: *) Fibonacci Heap ( extract min, more adt)
 
 - Hashing:
 	- (*to-be-done: *)
